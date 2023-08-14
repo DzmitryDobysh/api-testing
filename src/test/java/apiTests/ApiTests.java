@@ -14,6 +14,7 @@ public class ApiTests {
                 .when()
                 .get(endpoint)
                 .then()
+                .assertThat()
                 .statusCode(200);
     }
 
@@ -23,6 +24,7 @@ public class ApiTests {
                 .when()
                 .get(endpoint)
                 .then()
+                .assertThat()
                 .header("content-type", "application/json; charset=utf-8");
     }
 
@@ -32,6 +34,7 @@ public class ApiTests {
                 .when()
                 .get(endpoint)
                 .then()
+                .assertThat()
                 .body("", hasSize(10));
     }
 }
